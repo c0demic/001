@@ -16,3 +16,28 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+yarn_cache_clean{
+    args = ['--no-emoji', '--json']
+}
+
+yarn_install.dependsOn(yarn_cache_clean)
+
+
+task installExpress(type: NpmTask){
+    //install the express package only
+    args = ['install','react', 'redux', 'react-dom','babel','babel-loader','webpack','--save']
+}
+
+task uninstallExpress(type: NpmTask){
+    args = ['uninstall','react','react-dom','redux','babel','babel-loader','webpack','-S']
+}
+
+task addExpress(type: YarnTask){
+    //install the express package only
+    args = ['add','react','react-dom','redux','babel','babel-loader','webpack','--dev']
+}
+task removeExpress(type: YarnTask){
+    //install the express package only
+    args = ['remove','react','react-dom','redux','babel','babel-loader','webpack']
+}
