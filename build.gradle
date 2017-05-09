@@ -10,8 +10,9 @@ buildscript {
     }
 }
 
-plugins{
+plugins {
     id "com.moowork.node" version "1.1.1"
+    id "com.moowork.grunt" version "1.1.1"
 }
 
 apply plugin: 'com.moowork.node'
@@ -33,29 +34,29 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-yarn_cache_clean{
+yarn_cache_clean {
     args = ['--no-emoji', '--json']
 }
 
 yarn_install.dependsOn(yarn_cache_clean)
 
 
-task installExpress(type: NpmTask){
+task installExpress(type: NpmTask) {
     //install the express package only
-    args = ['install','react','jsx', 'redux', 'react-dom','babel','babel-loader','babel-core','webpack','--save']
+    args = ['install', 'react', 'jsx', 'redux', 'react-dom', 'babel', 'babel-loader', 'babel-core', 'webpack', '--save']
 }
 
-task uninstallExpress(type: NpmTask){
-    args = ['uninstall','react','jsx','react-dom','redux','babel','babel-loader','babel-core','webpack','-S']
+task uninstallExpress(type: NpmTask) {
+    args = ['uninstall', 'react', 'jsx', 'react-dom', 'redux', 'babel', 'babel-loader', 'babel-core', 'webpack', '-S']
 }
 
-task addExpress(type: YarnTask){
+task addExpress(type: YarnTask) {
     //install the express package only
-    args = ['add','react','jsx','react-dom','redux','babel','babel-loader','babel-core','babel-preset-es2015','babel-preset-react','webpack','--dev']
+    args = ['add', 'path','mozjpeg','pngquant','url-loader','img-loader','material-ui','paper','image-webpack-loader','imagemin/imagemin-pngquant','file-loader', 'react', 'jsx', 'react-dom','react-native', 'redux', 'babel','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'webpack', '--dev']
 }
-task removeExpress(type: YarnTask){
+task removeExpress(type: YarnTask) {
     //install the express package only
-    args = ['remove','react','jsx','react-dom','redux','babel','babel-loader','babel-core','babel-preset-es2015','babel-preset-react','webpack']
+    args = ['remove', 'path','mozjpeg','pngquant','url-loader','img-loader','material-ui','paper','image-webpack-loader','imagemin/imagemin-pngquant','file-loader', 'react', 'jsx', 'react-dom','react-native', 'redux', 'babel','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'webpack']
 }
 /*
 task jsjsx(type: NodeTask){
