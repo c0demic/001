@@ -7,16 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>webpack</title>
     <% //<script src="./js/test001.js"></script> %>
-
-  </head>
-  <body>
-  <script async src="./jswebpack/test001.bundle.js"></script>
-  <p id="demo"> a demo </p>
-  <button type="button" onclick="myFunction()">Try it</button>
-  <div id="hello"></div>
-
-  </body>
+</head>
+<body>
+<div id="container">
+    <div id="header"></div>
+    <p id="demo"> a demo </p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <div id="hello"></div>
+    <script async src="./jswebpack/test001.bundle.js"></script>
+</div>
+</body>
 </html>

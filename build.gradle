@@ -52,12 +52,25 @@ task uninstallExpress(type: NpmTask) {
 
 task addExpress(type: YarnTask) {
     //install the express package only
+    args = ['add','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','material-ui','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','--dev']
+}
+task removeExpress(type: YarnTask) {
+    //install the express package only
+    args = ['remove','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','material-ui','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux', 'babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','-D']
+}
+/*
+task addExpress(type: YarnTask) {
+    //install the express package only
     args = ['add', 'path','mozjpeg','pngquant','url-loader','img-loader','material-ui','paper','image-webpack-loader','imagemin/imagemin-pngquant','file-loader', 'react', 'jsx', 'react-dom','react-native', 'redux', 'babel','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'webpack', '--dev']
 }
 task removeExpress(type: YarnTask) {
     //install the express package only
     args = ['remove', 'path','mozjpeg','pngquant','url-loader','img-loader','material-ui','paper','image-webpack-loader','imagemin/imagemin-pngquant','file-loader', 'react', 'jsx', 'react-dom','react-native', 'redux', 'babel','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'webpack']
 }
+*/
+
+
+
 /*
 task jsjsx(type: NodeTask){
     script:file('')
