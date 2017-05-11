@@ -15,6 +15,15 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: [/\.jsx$/],
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'jsx-loader?harmony',
+                    }
+                ]
+            },
+            {
                 test: [/\.jsx?$/],
                 exclude: /node_modules/,
                 /*
@@ -33,6 +42,7 @@ module.exports = {
                  }
                  */
                 use: [
+
                     {
                         loader: 'babel-loader',
                         /*
@@ -44,7 +54,7 @@ module.exports = {
                         },
                         */
                         options: {
-                            presets: ["es2017", 'stage-0','react'],
+                            presets: ["es2015",'stage-0', 'react'],
                             plugins: [
                                 "transform-es2015-classes",
                                 "transform-decorators-legacy",
@@ -52,6 +62,7 @@ module.exports = {
                             ]
                         }
                     }
+
                 ]
             },
             {
@@ -66,6 +77,28 @@ module.exports = {
                     }
                 ]
 
+            },
+            {
+                test:/\.css$/,
+                use: [
+                    {
+                        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]___[hash:base64:5]'
+                    }
+                ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: "less-loader"
+                    }
+                ]
             }
         ],
 

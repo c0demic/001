@@ -6,43 +6,63 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Radium from 'radium';
 import PropTypes from 'prop-types';
-
+import {Style} from 'radium'
+import {StyleSheet, css} from 'aphrodite';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import TextField from 'material-ui/TextField';
 var meng = require('../material/meng.png');
 var taiji = require('../material/logoTaiji.jpg');
-/*
-    const
-    headerStyle = {
-        color: 'blue',
-        background: 'black'
-    }
-*/
-@Radium
-class Header extends React.Component {
 
-    getStyles(){
-        return{
-            headerStyle : {
-                color: 'blue',
-                background: 'black'
-            }
-        }
-    }
-
+class MainHeader extends React.Component {
     render() {
-        const styles = this.getStyles();
-
         return (
-//            <div id="titleText" style={headerStyle}>
-            <div id="titleText" style={styles.headerStyle}>
-                <h1>CASSACAVO</h1>
-                <img src={taiji} height="42" width="42"/>
-            </div>
+            <MuiThemeProvider>
+                <AppBar
+                    title="Title"
+                    iconClassNameRight="muidocs-icon-navigation-expand-more"
+                />
+            </MuiThemeProvider>
         );
     }
 }
+/*
+ class Header extends React.Component {
+
+ render() {
+ return (
+ <div id="logoCASSACA" className={css(styles.headerbar)}>
+ <img className={css(styles.logo)} src={meng}/>
+ <text className={css(styles.text)}>{this.props.text}</text>
+ </div>
+ );
+ }
+ }
+ const styles = StyleSheet.create({
+ logo: {
+ 'position': 'absolute',
+ 'magin-left': '0px',
+ 'width': 45,
+ 'height': 45
+ },
+ headerbar: {
+ position: 'relative',
+ background: 'black',
+ height: 45,
+ width: '100%',
+ //        'text-align': 'center'
+ },
+ text: {
+ margin: '52px',
+ height: '20px',
+ position: 'relative',
+ top: '10px',
+ 'vertical-align': 'middle'
+ }
+ });
+ */
 ReactDOM.render(
-    <Header />,
+    <MainHeader />,
     document.getElementById('header')
 );
