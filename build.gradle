@@ -49,16 +49,14 @@ task installExpress(type: NpmTask) {
 task uninstallExpress(type: NpmTask) {
     args = ['remove','jsx-loader','aphrodite','css-loader','style-loader','react-css-modules','postcss','postcss-cssnext','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','material-ui','less','less-loader','react-tap-event-plugin','formsy-material-ui','grommet','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux', 'babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','--save-dev']
 }
-/*
 task addExpress(type: YarnTask) {
     //install the express package only
-    args = ['add','jsx-loader','aphrodite','css-loader','style-loader','react-css-modules','postcss','postcss-cssnext','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','npm/material-ui','less','less-loader','react-tap-event-plugin','formsy-material-ui','grommet','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','--dev']
+    args = ['add','jsx-loader','aphrodite','css-loader','style-loader','react-css-modules','postcss','postcss-cssnext','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','material-ui','less','less-loader','react-tap-event-plugin','formsy-material-ui','grommet','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','--dev']
 }
 task removeExpress(type: YarnTask) {
     //install the express package only
-    args = ['remove','jsx-loader','aphrodite','css-loader','style-loader','react-css-modules','postcss','postcss-cssnext','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','material-ui','less','less-loader','react-tap-event-plugin','formsy-material-ui','grommet','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux', 'babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','-D']
+    args = ['remove','jsx-loader','aphrodite','css-loader','style-loader','react-css-modules','postcss','postcss-cssnext','babel-plugin-transform-es2015-classes','babel-plugin-transform-decorators-legacy','radium','prop-types','babel-plugin-syntax-decorators', 'path','material-ui','less','less-loader','react-tap-event-plugin','formsy-material-ui','grommet','paper','file-loader', 'react', 'jsx', 'react-dom', 'redux','babel-cli', 'babel-loader', 'babel-core', 'babel-preset-es2015','babel-preset-es2017', 'babel-preset-react','babel-preset-stage-0','babel-preset-stage-1','babel-preset-stage-2', 'webpack','-D']
 }
-*/
 /*
 task addExpress(type: YarnTask) {
     //install the express package only

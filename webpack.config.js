@@ -5,13 +5,20 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+
     entry: './src/main/webapp/js/test001.js',
     output: {
         path: '/playground/MyWeb/IDEA/gradle001/src/main/webapp/jswebpack',
+//        path: __dirname + 'src/main/webapp/jswebpack',
+//        path: __dirname+'src/main/webapp/jswebpack',
         filename: 'test001.bundle.js',
         publicPath: './jswebpack/'
     },
-
+    resolve: {
+        alias: {
+            approot: path.resolve('/playground/MyWeb/IDEA/gradle001/src/main/webapp')
+        }
+    },
     module: {
         loaders: [
             {
@@ -46,23 +53,23 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         /*
-                        query: {
-                            plugins: [
-                                "transform-decorators-legacy",
-                                "transform-class-properties"
-                            ]
-                        },
-                        */
+                         query: {
+                         plugins: [
+                         "transform-decorators-legacy",
+                         "transform-class-properties"
+                         ]
+                         },
+                         */
                         options: {
-                            presets: ["es2015",'stage-0', 'react'],
+                            presets: ["es2015", 'stage-0', 'react'],
                             plugins: [
                                 "transform-es2015-classes",
                                 "transform-decorators-legacy",
                                 "transform-class-properties"
                             ]
+
                         }
                     }
-
                 ]
             },
             {
@@ -77,15 +84,17 @@ module.exports = {
                     }
                 ]
 
-            },
+            }
+            ,
             {
-                test:/\.css$/,
+                test: /\.css$/,
                 use: [
                     {
                         loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]___[hash:base64:5]'
                     }
                 ]
-            },
+            }
+            ,
             {
                 test: /\.less$/,
                 use: [
@@ -103,12 +112,6 @@ module.exports = {
         ],
 
     },
-    /*
-     resolve:{
-     root: [
-     path.resolve('./src/main/webapp/js')
-     ]
-     }
-     */
+
 }
 ;

@@ -12,8 +12,8 @@ import {StyleSheet, css} from 'aphrodite';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
-var meng = require('../material/meng.png');
-var taiji = require('../material/logoTaiji.jpg');
+var meng = require('approot/js/ui/material/meng.png');
+var taiji = require('approot/js/ui/material/logoTaiji.jpg');
 
 class MainHeader extends React.Component {
     render() {
