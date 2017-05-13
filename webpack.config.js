@@ -3,20 +3,19 @@
  */
 var path = require('path');
 var webpack = require('webpack');
-
+var ROOT_PATH=path.resolve(__dirname);
 module.exports = {
 
-    entry: './src/main/webapp/js/test001.js',
+    entry: path.resolve(ROOT_PATH,'src/main/webapp/js/test001.js'),
     output: {
-        path: '/playground/MyWeb/IDEA/gradle001/src/main/webapp/jswebpack',
-//        path: __dirname + 'src/main/webapp/jswebpack',
-//        path: __dirname+'src/main/webapp/jswebpack',
+        path: path.resolve(ROOT_PATH,'src/main/webapp/jswebpack'),
         filename: 'test001.bundle.js',
-        publicPath: './jswebpack/'
+        publicPath: '/jswebpack/'
     },
     resolve: {
+        modules: [__dirname,'node_modules'],
         alias: {
-            approot: path.resolve('/playground/MyWeb/IDEA/gradle001/src/main/webapp')
+            approot: 'src/main/webapp'
         }
     },
     module: {

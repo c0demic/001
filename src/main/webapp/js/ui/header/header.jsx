@@ -20,7 +20,7 @@ class MainHeader extends React.Component {
         return (
             <MuiThemeProvider>
                 <AppBar
-                    title="Title"
+                    title="CASSACAVO"
                     iconClassNameRight="muidocs-icon-navigation-expand-more"
                 />
             </MuiThemeProvider>
